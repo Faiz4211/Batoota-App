@@ -1,32 +1,30 @@
 import React from 'react';
-import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { Text, TouchableOpacity } from 'react-native';
 import { heightPercentageToDP as hp, widthPercentageToDP as wp } from 'react-native-responsive-screen';
 import colors from '../Styles/Color';
 
-const CustomButton = ({ btnText, bgColor }) => {
+const CustomButton = (props) => {
     return (
-        <TouchableOpacity style={{
-            backgroundColor: bgColor,
-            borderRadius: 10,
-            height: hp('6%'),
-            width: wp('80%'),
-            justifyContent: 'center',
-            flexDirection: 'row',
-            alignItems: 'center'
-        }}>
-            <Image source={require('../assets/images/google.png')} />
-            <Text style={styles.Text}>{btnText}</Text>
-        </TouchableOpacity>
+        <TouchableOpacity
+            style={{
+                backgroundColor: props.bgColor,
+                borderRadius: 10,
+                height: hp('6%'),
+                width: wp('80%'),
+                alignSelf: 'center',
+                marginTop: hp('1%'),
+                alignItems: 'center',
+                justifyContent: 'center',
+            }}
+        >
+            <Text style={{
+                color: colors.white,
+                fontSize: hp('2%'),
+                textAlign: 'center',
 
+            }}>{props.btnText}</Text>
+        </TouchableOpacity>
     )
 }
-
-const styles = StyleSheet.create({
-    Text: {
-        fontSize: hp('2%'),
-        textAlign: 'center',
-        color: colors.white
-    }
-});
 
 export default CustomButton;

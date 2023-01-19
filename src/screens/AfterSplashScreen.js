@@ -33,6 +33,7 @@ const AfterSplashScreen = (prop) => {
                 </View>
                 <Text style={styles.Text}>Or</Text>
                 <CustomButton
+                    onPress={() => navigation.navigate('SignIn')}
                     bgColor={colors.yellowPrimary}
                     btnText={'SIGN IN'}
                 />

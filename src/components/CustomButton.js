@@ -6,6 +6,7 @@ import colors from '../Styles/Color';
 const CustomButton = (props) => {
     return (
         <TouchableOpacity
+            onPress={props.onPress}
             style={{
                 backgroundColor: props.bgColor,
                 borderRadius: 10,

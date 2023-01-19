@@ -2,6 +2,8 @@ import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 import SplashScreen from '../screens/SplashScreen';
 import AfterSplashScreen from '../screens/AfterSplashScreen';
+import SigninScreen from '../screens/SigninScreen';
+import MainDashboardScreen from '../screens/MainDashboardScreen';
 
 const Stack = createStackNavigator();
 const screenOptionStyle = {
@@ -18,6 +20,14 @@ const HomeStackNavigator = () => {
             <Stack.Screen
                 name="AfterSplash"
                 component={AfterSplashScreen}
+            />
+            <Stack.Screen
+                name="SignIn"
+                component={SigninScreen}
+            />
+            <Stack.Screen
+                name="Dashboard"
+                component={MainDashboardScreen}
             />
         </Stack.Navigator>
     )
